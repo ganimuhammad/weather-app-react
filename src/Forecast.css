@@ -1,0 +1,35 @@
+.forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  box-shadow: 0px 4px 9px rgba(129, 129, 129, 0.2);
+  margin-right: 30px;
+  background-color: white;
+  width: 100px;
+  height: 150px;
+  padding: 18px;
+  transition: transform 100ms ease-in;
+}
+
+.forecast:last-child {
+  margin-right: 0;
+}
+
+.forecast_weatherIcon {
+  height: 60px;
+  width: 60px;
+  background-size: 100%;
+  margin: 20px 0;
+}
+
+.forecast__futureTemp {
+  font-weight: 800;
+}
+
+.forecast:hover {
+  background-color: rgb(181, 189, 194, 0.7);
+  transform: scale(1.07);
+}

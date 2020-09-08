@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import TempDisplay from "./TempDisplay";
+import Search from "./Search";
+import { sanitizeData } from "./util";
 
 function App() {
+  const apiKey = "b33e76bb3e09f87c85b71c157f5d9463";
+  const [forecastData, setForecastData] = useState([]);
+  const [city, setCity] = useState("");
+
+  const [inputCity, setInputCity] = useState("Kerala");
+
+  useEffect(() => {
+    const getCountriesData = async () => {
+      await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${inputCity}&units=metric&appid=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const forecasts = sanitizeData(data);
+          setForecastData(forecasts);
+          setCity(data.city.name);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    getCountriesData();
+  }, [inputCity]);
+
+  const onCitySearch = (input) => {
+    setInputCity(input);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Search searchCity={onCitySearch} />
+      <TempDisplay city={city} forecastData={forecastData} />
     </div>
   );
 }

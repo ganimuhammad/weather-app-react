@@ -1,0 +1,68 @@
+.tempDisplay {
+  width: 690px;
+  height: 440px;
+  background-color: rgba(250, 250, 250, 0.88);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  position: relative;
+}
+
+.tempDisplay__today {
+  text-align: left;
+  font-size: 10px;
+  padding: 46px;
+}
+
+.tempDisplay__inlineDate {
+  display: inline;
+}
+
+.tempDisplay__inlineDate > p {
+  font-size: 14px;
+  color: #848484;
+}
+
+.tempDisplay__inlineDate > h2 {
+  display: block;
+  font-size: 20px;
+}
+
+.tempDisplay__todayDescribe {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  justify-content: space-around;
+}
+
+.tempDisplay__todayDescribe > h1 {
+  font-size: 9rem;
+}
+
+.tempDisplay__tempDescription {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  text-align: center;
+}
+
+.tempDisplay__tempDescription > h2 {
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.tempDisplay__tempDescription > p {
+  color: #848484;
+  font-size: 12px;
+}
+
+.tempDisplay__future {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  transform: translateY(225px);
+}
+
+.tempDisplay__future > p {
+  margin: 0;
+  text-align: center;
+}

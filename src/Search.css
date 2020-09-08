@@ -1,0 +1,46 @@
+.search {
+  width: var(--card-width);
+  display: flex;
+  justify-content: space-evenly;
+  height: 35px;
+  margin-bottom: 15px;
+}
+
+.search__input {
+  width: calc(var(--card-width) - 150px);
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  outline-width: 0;
+  opacity: 50%;
+  text-align: center;
+  padding: 8px;
+  margin-right: 1em;
+}
+
+.search__input::placeholder {
+  text-align: center;
+}
+
+.search__input:hover {
+  opacity: 90%;
+}
+
+.search__input--err {
+  border: red solid 1px;
+}
+
+.search__button {
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  outline-width: 0;
+  opacity: 50%;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search__button:hover {
+  opacity: 90%;
+}
