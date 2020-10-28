@@ -1,7 +1,7 @@
 import React from "react";
 import "./TempDisplay.css";
-import Forecast from "./Forecast";
 import Moment from "react-moment";
+import Forecast from "./../forecast/Forecast";
 
 function TempDisplay({ city, forecastData }) {
   return (

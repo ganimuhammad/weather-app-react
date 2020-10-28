@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import TempDisplay from "./TempDisplay";
-import Search from "./Search";
 import { sanitizeData } from "./util";
+import Search from "./components/search/Search";
+import TempDisplay from "./components/tempDisplay/TempDisplay";
 
 function App() {
   const apiKey = "b33e76bb3e09f87c85b71c157f5d9463";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Forecast.css";
-import { getDayByIndex } from "./util";
+import { getDayByIndex } from "./../../util";
 
 function Forecast({ id, icon, temp }) {
   return (
