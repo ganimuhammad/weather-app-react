@@ -33,7 +33,6 @@ const getDailyForecastIcon = (weatherCondition) => {
     case "Clear":
       imageIcon = sunny;
       break;
-
     default:
       imageIcon = partlycloudy;
       break;
