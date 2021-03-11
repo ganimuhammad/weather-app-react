@@ -33,6 +33,7 @@ function TempDisplay({ city, forecastData }) {
         {forecastData.map((forecast) => (
           <Forecast
             id={forecast.id}
+            key={forecast.id}
             icon={forecast.dailyIcon}
             temp={forecast.temperatureNow}
           />
