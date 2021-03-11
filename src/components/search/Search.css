@@ -22,10 +22,6 @@
   text-align: center;
 }
 
-.search__input:hover {
-  opacity: 90%;
-}
-
 .search__input--err {
   border: red solid 1px;
 }
@@ -39,8 +35,4 @@
   text-align: center;
   padding: 8px;
   cursor: pointer;
-}
-
-.search__button:hover {
-  opacity: 90%;
 }
